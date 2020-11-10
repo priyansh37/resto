@@ -1,0 +1,19 @@
+<p>invoice works!</p>
+<div class="btn-group">
+<button (click)="add()">Add</button>
+<button (click)="upload()">upload</button>
+</div>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </thead>
+  <tbody>
+    <tr class="app-item" *ngFor="let invoiceItem of invoiceItems" [item]="invoiceItem"></tr>
+  </tbody>
+  <tfoot>
+      <td colspan="2">Total</td>
+      <td>{{getTotal()}}{{total}}</td>
+  </tfoot>
+</table>
